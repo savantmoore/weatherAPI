@@ -14,7 +14,7 @@
           var key = '69e91067b3e5473760352dc1ba8a9ac2';
           var city = $('input#loc').val();
           $.get(`http://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${key}`, function(res) {
-            .append("html_str");
+            console.log(res);
             var html_str = "";
             html_str += "<h1>" + res.name + ", " + res.sys.country + "</h1>";
             html_str += "<h3>Temperature: " + res.main.temp +  " ℉</h3>";
